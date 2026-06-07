@@ -2,12 +2,12 @@ name: Deploy to GitHub Pages
 
 # Builds the dashboard together with our forked core (which includes the new
 # GoogleHealth engine) and publishes a self-contained site to GitHub Pages at
-# https://wellivea1.github.io/dashboard-vibecode/ .
+# https://zeitlog.github.io/ .
 #
 # Unlike upstream's main.yml, this does not use the private sleepdiary builder
 # image or the org Pages layout. The dashboard loads core from this same site
-# (/dashboard-vibecode/core/...), while the unchanged report/info bundles are
-# loaded from https://sleepdiary.github.io/ (see public/index.html).
+# (/core/...), while the report/info bundles are mirrored from the Zeitlog
+# forks.
 
 on:
   push:
@@ -69,11 +69,11 @@ jobs:
             cp core-src/sleepdiary-core.min.js.map docs/core/
           fi
           cp core-src/src/ActivityLog/preprocessor.js docs/core/src/ActivityLog/preprocessor.js
-          # report/info are unchanged from upstream; mirror their bundles so both
+          # report/info are mirrored from the forked sites so both
           # index.html and the charts web worker (src/info.js) load them from this
           # site's own base path. -f makes the build fail loudly if upstream is down.
-          curl -fsSL https://sleepdiary.github.io/report/sleepdiary-report.min.js -o docs/report/sleepdiary-report.min.js
-          curl -fsSL https://sleepdiary.github.io/info/sleepdiary-info.min.js -o docs/info/sleepdiary-info.min.js
+          curl -fsSL https://zeitlog.github.io/report/sleepdiary-report.min.js -o docs/report/sleepdiary-report.min.js
+          curl -fsSL https://zeitlog.github.io/info/sleepdiary-info.min.js -o docs/info/sleepdiary-info.min.js
           touch docs/.nojekyll
 
       - name: Upload Pages artifact

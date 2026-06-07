@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
     <!-- core/report/info are all served from this site. core is our fork's build
-         (includes the GoogleHealth engine); report/info are unchanged from upstream
-         and mirrored into the site at deploy time so they share one base path with
+         (includes the GoogleHealth engine); report/info are mirrored from the
+         Zeitlog forks at deploy time so they share one base path with
          the charts web worker (src/info.js). -->
     <script src="<%= htmlWebpackPlugin.options.script_url %>core/sleepdiary-core.min.js"></script>
     <script defer src="<%= htmlWebpackPlugin.options.script_url %>report/sleepdiary-report.min.js"></script>

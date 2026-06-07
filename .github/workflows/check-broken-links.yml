@@ -15,5 +15,5 @@ jobs:
       - name: Check
         uses: ruzickap/action-my-broken-link-checker@v2.2.7
         with:
-          url: https://sleepdiary.github.io/dashboard/
+          url: https://zeitlog.github.io/
           cmd_params: "--one-page-only --color=always"
