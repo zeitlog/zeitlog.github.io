@@ -3,8 +3,8 @@
   "description": "Zeitlog - sleep and circadian-rhythm tracker with Fitbit and Google Health import, for circadian rhythm disorders including Non-24",
   "version": "0.1.0",
   "homepage": "https://zeitlog.github.io/",
-  "bugs": "https://github.com/wellivea1/dashboard-vibecode/issues",
-  "repository": "github:wellivea1/dashboard-vibecode",
+  "bugs": "https://github.com/zeitlog/zeitlog.github.io/issues",
+  "repository": "github:zeitlog/zeitlog.github.io",
   "private": true,
   "license": "GPL-2.0-only",
   "scripts": {
