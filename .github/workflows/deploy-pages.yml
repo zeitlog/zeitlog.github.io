@@ -35,10 +35,10 @@ jobs:
       VUE_APP_GOOGLE_HEALTH_CLIENT_ID: 898364244521-vlmfbejok0392dfe931i7fiqthip8ii4.apps.googleusercontent.com
     steps:
       - name: Checkout dashboard
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Checkout forked core (includes GoogleHealth engine)
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           repository: zeitlog/core
           ref: main
